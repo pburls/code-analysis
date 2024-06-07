@@ -18,6 +18,7 @@ We assume you have a similar folder structure below with:
 
 Inside the `code-analysis` folder we expect the following scripts:
 1. The entire [maat-scripts](https://github.com/adamtornhill/maat-scripts/tree/python3) repo of script cloned.
+Check out the `python3` branch of the repo!
 2. The custom `extract_git_logs.py` script.
 
 ### Extract code change history from Git logs
