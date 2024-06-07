@@ -65,3 +65,10 @@ Using the [merger pythons script](https://github.com/adamtornhill/maat-scripts/b
 ```
 python code-analysis/maat-scripts/merge/merge_comp_freqs.py revision.csv maat_lines.csv > hotspots-freq-comp.csv
 ```
+
+## Generating the hotspots
+First we need to generate a json file of all the files in the project and their lines of code.
+
+```
+python code-analysis/maat-scripts/transform/csv_as_enclosure_json.py --structure aat_lines.csv --weights hotspots-freq-comp.csv > hotspots.json
+```
