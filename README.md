@@ -58,3 +58,10 @@ $ cloc ./ --by-file --csv --quiet --report-file=maat_lines.csv --exclude-lang=SV
 You can tweak the file types you want to exclude from your lines of code csv report by modifying the `--exclude-lang` flag.
 
 You can also exclude directories from the cloc command by modifying the `--exclude-dir` flag.
+
+## Merging the change frequency and lines of code data
+Using the [merger pythons script](https://github.com/adamtornhill/maat-scripts/blob/python3/merge/merge_comp_freqs.py) in the maat-scripts repo, we can merge the change frequency data with the lines of code data.
+
+```
+python code-analysis/maat-scripts/merge/merge_comp_freqs.py revision.csv maat_lines.csv > hotspots-freq-comp.csv
+```
