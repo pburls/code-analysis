@@ -90,3 +90,22 @@ python -m http.server 8888
 
 Then you can browse to the following URL to see the visualisation:
 http://localhost:8888/crime-scene-hotspots.html
+
+
+## Complexity Trends over Time
+
+### Generate complexity data for a module at the current time
+Pick a hotspot module in your project to analyse from the visualisation. You can also find the module file path in the hotspots-freq-comp.csv file.
+
+To generate a complexity trend over time, we can use the following command:
+
+```
+python code-analysis/maat-scripts/miner/complexity_analysis.py <file-to-analyse>
+```
+
+This should give you an output like:
+```
+n,total,mean,sd,max
+1602,2035.0,1.27,0.95,6.0
+```
+
