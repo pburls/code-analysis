@@ -51,8 +51,10 @@ Install the cloc tool: https://github.com/AlDanial/cloc?tab=readme-ov-file#insta
 
 Run the following command in your project root directory:
 ```sh
-$ cloc ./ --by-file --csv --quiet --report-file=maat_lines.csv --exclude-lang=SVG,JSON,CSV,XML,Text
+$ cloc ./ --by-file --csv --quiet --report-file=maat_lines.csv --exclude-lang=SVG,JSON,CSV,XML,Text --exclude-dir=code-analysis,code
 ```
 !warning! If the cloc command is taking a long time, it is likely due to npm `node_modules` folders inside some of your project repos. Please either delete these folders, checkout the repositories again or exclude them from the cloc command.
 
 You can tweak the file types you want to exclude from your lines of code csv report by modifying the `--exclude-lang` flag.
+
+You can also exclude directories from the cloc command by modifying the `--exclude-dir` flag.
