@@ -66,9 +66,13 @@ Using the [merger pythons script](https://github.com/adamtornhill/maat-scripts/b
 python code-analysis/maat-scripts/merge/merge_comp_freqs.py revision.csv maat_lines.csv > hotspots-freq-comp.csv
 ```
 
-## Generating the hotspots
+## Generating and visualising the hotspots
 First we need to generate a json file of all the files in the project and their lines of code.
 
+To do this, we can use the following script in the maat-scripts transform folder:
+
 ```
-python code-analysis/maat-scripts/transform/csv_as_enclosure_json.py --structure aat_lines.csv --weights hotspots-freq-comp.csv > hotspots.json
+python code-analysis/maat-scripts/transform/csv_as_enclosure_json.py --structure maat_lines.csv --weights hotspots-freq-comp.csv > code-analysis/maat-scripts/transform/hotspots.json
 ```
+
+This will create a hotspots.json file in the transform folder for us to use with the d3 visualisation.
