@@ -109,3 +109,14 @@ n,total,mean,sd,max
 1602,2035.0,1.27,0.95,6.0
 ```
 
+### Generate complexity data for a module over time
+To generate a complexity trend over time, we can use the following command:
+
+```
+cd <git repo>
+python ../code-analysis/maat-scripts/miner/git_complexity_trend.py --start <start_git_revision>  --end <end_git_revision> --file <file-to-analyse>
+```
+- start_git_revision: The git revision hash of the start of the time period you want to analyse - use your git log file to find this towards the bottom. For the correct git repo!
+- end_git_revision: The git revision hash of the end of the time period you want to analyse - use your git log file to find this towards the top. For the correct git repo!
+- file-to-analyse: The file path of the module you want to analyse - exclude the git repo name from the path.
+- git repo: The git repo the file you want to analyse is in
