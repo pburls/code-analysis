@@ -44,3 +44,13 @@ java -jar code-analysis/code-maat-1.0.4-standalone.jar -l code-analysis/git-logs
 ```
 java -jar code-analysis/code-maat-1.0.4-standalone.jar -l code-analysis/git-logs/<your log file here>.log -c git2 -a revisions
 ```
+
+### Counting the lines of code in your project
+
+Install the cloc tool: https://github.com/AlDanial/cloc?tab=readme-ov-file#install-via-package-manager
+
+Run the following command in your project root directory:
+```sh
+$ cloc ./ --by-file --csv --quiet --report-file=maat_lines.csv
+```
+!warning! If the cloc command is taking a long time, it is likely due to npm `node_modules` folders inside some of your project repos. Please either delete these folders, checkout the repositories again or exclude them from the cloc command.
