@@ -67,6 +67,8 @@ python code-analysis/maat-scripts/merge/merge_comp_freqs.py revision.csv maat_li
 ```
 
 ## Generating and visualising the hotspots
+
+### Generate json file for visualisation
 First we need to generate a json file of all the files in the project and their lines of code.
 
 To do this, we can use the following script in the maat-scripts transform folder:
@@ -76,3 +78,15 @@ python code-analysis/maat-scripts/transform/csv_as_enclosure_json.py --structure
 ```
 
 This will create a hotspots.json file in the transform folder for us to use with the d3 visualisation.
+
+### Launch visualisation
+We will use a python server in the maat-scripts transform folder to launch the visualisation.
+
+
+```
+cd code-analysis/maat-scripts/transform
+python -m http.server 8888
+```
+
+Then you can browse to the following URL to see the visualisation:
+http://localhost:8888/crime-scene-hotspots.html
